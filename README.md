@@ -1,2 +1,2 @@
-# SpringMidTerm
-CS 204: Back-end
+# MidTerm
+ CS 204: Back-end
