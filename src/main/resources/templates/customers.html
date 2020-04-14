@@ -5,7 +5,7 @@
     <title>Customers</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{/index.html}">
+    <link rel="stylesheet" th:href="@{/index.css}">
     <style>
         table, th, td {
             border: 1px solid black;
@@ -43,14 +43,16 @@
 <div th:if="${#lists.isEmpty(customers)}">
     <p>There are no customers yet.</p>
 </div>
+<div style="text-align: center">
+    <form th:action="@{/customers/login}" style="margin-bottom: 10px">
+        <input type="submit" value="Login"/>
+    </form>
 
-<form th:action="@{/customers/login}" style="margin-bottom: 10px">
-    <input type="submit" value="Login"/>
-</form>
+    <form th:action="@{/customers/add}">
+        <input type="submit" value="Add New Customer"/>
+    </form>
+</div>
 
-<form th:action="@{/customers/add}">
-    <input type="submit" value="Add New Customer"/>
-</form>
 
 </body>
 </html>
