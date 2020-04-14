@@ -44,7 +44,7 @@ public class CustomerController {
     }
 
     @PostMapping(value = "/customers/submit")
-    public String addToCustomer(String name, Customer customer) {
+    public String addToCustomer(Customer customer) {
         customerRepository.save(customer);
         return "redirect:/customers";
     }
